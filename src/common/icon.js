@@ -1,9 +1,9 @@
-import React from "react"
-import PropTypes from "prop-types"
-import styled from "styled-components"
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 const Icon = props => (
-  <Icon.Element {...props} className={"material-icons"}>
+  <Icon.Element {...props} className={'material-icons'}>
     {props.name}
   </Icon.Element>
 )
@@ -21,7 +21,7 @@ Icon.propTypes = {
 
 Icon.defaultProps = {
   size: 16,
-  color: "inherit"
+  color: 'inherit'
 }
 
 export default Icon
