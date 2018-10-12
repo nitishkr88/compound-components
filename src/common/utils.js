@@ -2,8 +2,12 @@ import React from 'react'
 
 function noop() {}
 
+function _isListItem(child) {
+  return child.type.displayName === 'ListItem'
+}
+
 function isValid(child) {
-  return child && React.isValidElement(child)
+  return child && React.isValidElement(child) && _isListItem(child)
 }
 
 function contains(selected, value, multi = false) {

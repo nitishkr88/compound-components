@@ -24,15 +24,9 @@ class ListApp extends React.Component {
           label="Select One"
           initialValues={list1.initialValues}
           onSelection={v => console.log(v)}>
-          <List.Item value={1} icon="add_circle_outline">
-            one
-          </List.Item>
-          <List.Item value={2} icon="notifications_none">
-            two
-          </List.Item>
-          <List.Item value={3} icon="link">
-            three
-          </List.Item>
+          <List.Item value={1} icon="add_circle_outline">one</List.Item>
+          <List.Item value={2} icon="notifications_none">two</List.Item>
+          <List.Item value={3} icon="link">three</List.Item>
         </List>
         <List
           id="list2"
@@ -40,15 +34,9 @@ class ListApp extends React.Component {
           label="Select Multiple"
           initialValues={list2.initialValues}
           onSelection={v => console.log(v)}>
-          <List.Item value={1} icon="add_circle_outline">
-            one
-          </List.Item>
-          <List.Item value={2} icon="notifications_none">
-            two
-          </List.Item>
-          <List.Item value={3} icon="link">
-            three
-          </List.Item>
+          <List.Item value={1} icon="add_circle_outline">one</List.Item>
+          <List.Item value={2} icon="notifications_none">two</List.Item>
+          <List.Item value={3} icon="link">three</List.Item>
         </List>
       </StyledContainer>
     )

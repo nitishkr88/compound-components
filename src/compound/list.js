@@ -75,7 +75,9 @@ class List extends React.Component {
   }
 }
 
-List.Item = StyledItem
+List.Item = props => <StyledItem {...props} />
+
+List.Item.displayName = 'ListItem'
 
 List.defaultProps = {
   onSelection: noop,

@@ -53,7 +53,8 @@ class ListApp extends React.Component {
             type={list1.type}
             selected={this.isSelected('list1', 1)}
             onSelection={this.onSelection('list1')}
-            icon="add_circle_outline">
+            icon="add_circle_outline"
+          >
             one
           </Item>
           <Item
@@ -61,7 +62,8 @@ class ListApp extends React.Component {
             type={list1.type}
             selected={this.isSelected('list1', 2)}
             onSelection={this.onSelection('list1')}
-            icon="notifications_none">
+            icon="notifications_none"
+          >
             two
           </Item>
           <Item
@@ -69,7 +71,8 @@ class ListApp extends React.Component {
             type={list1.type}
             selected={this.isSelected('list1', 3)}
             onSelection={this.onSelection('list1')}
-            icon="link">
+            icon="link"
+          >
             three
           </Item>
         </List>
@@ -80,7 +83,8 @@ class ListApp extends React.Component {
             type={list2.type}
             selected={this.isSelected('list2', 1)}
             onSelection={this.onSelection('list2')}
-            icon="add_circle_outline">
+            icon="add_circle_outline"
+          >
             one
           </Item>
           <Item
@@ -88,7 +92,8 @@ class ListApp extends React.Component {
             type={list2.type}
             selected={this.isSelected('list2', 2)}
             onSelection={this.onSelection('list2')}
-            icon="notifications_none">
+            icon="notifications_none"
+          >
             two
           </Item>
           <Item
@@ -96,7 +101,8 @@ class ListApp extends React.Component {
             type={list2.type}
             selected={this.isSelected('list2', 3)}
             onSelection={this.onSelection('list2')}
-            icon="link">
+            icon="link"
+          >
             three
           </Item>
         </List>
