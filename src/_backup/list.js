@@ -49,31 +49,33 @@ class List extends React.Component {
           </StyledLabel>
         )}
         {React.Children.map(validChildren, child =>
-          React.cloneElement(child, {
-            multi: this.props.multi,
-            selected: this.isSelected(child.props.value),
-            onSelection: this.onSelection,
-            type: this.getToggleType()
-          })
+          React.cloneElement(
+            child,
+            {
+              multi: this.props.multi,
+              selected: this.isSelected(child.props.value)
+            },
+            <StyledRow onClick={() => this.onSelection(child.props.value)}>
+              <Toggle
+                type={this.getToggleType()}
+                readOnly
+                checked={this.isSelected(child.props.value)}
+              />
+              <StyledContent>{child.props.children}</StyledContent>
+              {child.props.icon && (
+                <StyledIcon>
+                  <Icon name={child.props.icon} />
+                </StyledIcon>
+              )}
+            </StyledRow>
+          )
         )}
       </StyledList>
     )
   }
 }
 
-List.Item = props => (
-  <StyledItem {...props}>
-    <StyledRow onClick={() => props.onSelection(props.value)}>
-      <Toggle type={props.type} readOnly checked={props.selected} />
-      <StyledContent>{props.children}</StyledContent>
-      {props.icon && (
-        <StyledIcon>
-          <Icon name={props.icon} />
-        </StyledIcon>
-      )}
-    </StyledRow>
-  </StyledItem>
-)
+List.Item = props => <StyledItem {...props} />
 
 List.Item.displayName = 'ListItem'
 
@@ -84,7 +86,8 @@ List.defaultProps = {
 
 List.propTypes = {
   onSelection: PropTypes.func,
-  multi: PropTypes.bool
+  multi: PropTypes.bool,
+  label: PropTypes.string
 }
 
 export default List
